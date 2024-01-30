@@ -4,7 +4,7 @@ Chocolatey front-end, Performence Monitor and Tweaker/Optimizer for Windows 10/1
 
 Built with Vue, DaisyUI, Wails and Go.
 
-![image](/marketing/Ultimate.png)
+![image](https://github.com/onrirr/WindowsManager/blob/main/marketing/ultimate.png?raw=true)
 
 ## Roadmap
 - [x] Chocolatey front-end + installer

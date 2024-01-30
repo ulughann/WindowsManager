@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlx" data-theme="corporate">
+  <head>
+    <script src="https://unpkg.com/vue-ui-preloader"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-ui-preloader/dist/loader.css">
+
+    <script>
+      let global = {};
+      let themeColor = false;
+      const theme = localStorage.getItem("theme");
+      if (theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+      } else {
+        document.documentElement.setAttribute("data-theme", "corporate");
+      }
+
+      function ch() {
+        const boxIcons = document.getElementsByTagName("box-icon");
+        
+        for (let i = 0; i < boxIcons.length; i++) {
+          const theme = localStorage.getItem("theme");
+          if (["light", "corporate", "retro", "cyberpunk"].includes(theme) || theme == null) {
+            boxIcons[i].setAttribute("color", "#000000");
+          } else {
+            boxIcons[i].setAttribute("color", "#ffffff");
+          }
+        }
+      }
+      ch();
+    </script>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Windows Manager</title>
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <div id="app"></div>
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
